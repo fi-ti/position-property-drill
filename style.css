@@ -29,10 +29,10 @@ nav {
 nav .icon-img {
   height: 60px;
   border-radius: 50%;
-  vertical-align: middle;
   border: 1px solid black;
 }
 
+vertical-align: middle;
 nav ul {
   display: inline-block;
 }
