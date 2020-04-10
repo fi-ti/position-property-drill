@@ -1,35 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <title>CSS Layout Exercises | position property</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Layout exercise on `position` property for Thinkful's front end web development course">
+body *  {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  }
 
-  <!-- fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  body {
+  	background-image: url("https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  <!-- reset -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+  }
 
-  <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="main.css">
+a {
+  text-decoration: none;
+}
 
-  </head>
-  <body>
-  <!-- To finish the design, the HTML for the nav requires no additional elements, just the right CSS (these links are not intended to work, they're here for show) -->
-  <nav class="container">
-    <img src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/icon.png" alt="cat image">
-    <ul>
-      <li><a href="index.html">Hom</a></li>
-      <li><a href="display-exercise.html">display</a></li>
-      <li><a href="float-exercise.html">float</a></li>
-    </ul>
-  </nav>
+nav {
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	background-color: grey;
+}
 
-  <main>
-    <img src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/spacecat.png" alt="Cat Space Image" />
-    <img src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/spacedog.png" alt="Dog Space Image" />
-    <!-- Put the HTML you need to accomplish the design -->
-  </main>
-</body>
-</html>
+nav img {
+	height: 60px;
+    border: 1px black solid;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 40px;
+    vertical-align: middle;	
+
+}
+
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/** your styles go here **/
+nav ul {
+	display: inline-block;
+    
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav li::after {
+	content: "|";
+	margin: 0 3px;
+}
+
+.border {
+	width: 600px;
+	height: 300px;
+	margin-top: 200px;
+	border: 10px white dotted;
+    position: relative;
+	
+}
+
+.cat, .dog {
+  position: absolute;
+  width: 200px;
+}
+
+.cat {
+  top: -90px;
+  left: -90px;
+}
+
+.dog {
+  bottom: -120px;
+  right: -60px;
+}
